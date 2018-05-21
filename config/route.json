@@ -1,0 +1,10 @@
+{
+  "routes":
+  [
+    { "name": "users",             "path": "/users",         "fn": { "path": "../../api/users" },         "use": true }
+  ],
+  "administrator":
+  [
+    { "name": "administrator",   "path": "/administrator",      "fn": { "path": "../../api/administrator" },    "use": true }
+  ]
+}
