@@ -1,26 +1,16 @@
 {
   "name": "eb-express",
-  "version": "1.0.0",
-  "description": "eb-express test",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KimSungShin/eb-express.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KimSungShin/eb-express/issues"
-  },
-  "homepage": "https://github.com/KimSungShin/eb-express#readme",
   "dependencies": {
-    "express": "^4.16.3",
-    "morgan": "^1.9.0",
-    "sequelize": "^4.37.8",
-    "sqlite": "^2.9.2"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0"
   }
 }
