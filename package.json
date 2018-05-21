@@ -1,0 +1,23 @@
+{
+  "name": "eb-express",
+  "version": "1.0.0",
+  "description": "eb-express test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimSungShin/eb-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KimSungShin/eb-express/issues"
+  },
+  "homepage": "https://github.com/KimSungShin/eb-express#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  }
+}
