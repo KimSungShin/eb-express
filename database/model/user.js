@@ -4,10 +4,8 @@
 
 const Sequelize = require('sequelize');
 const db = require('../../database');
-module.exports = db.define( 'user',{
-    userId: { type: Sequelize.STRING(20), primaryKey: true },
-    type: { type: Sequelize.STRING },
-    joinDate: { type: Sequelize.DATE },
-},{
-    paranoid: true,
-});
+module.exports = db.define( 'users',{
+	id:      { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true, },
+    name: { type: Sequelize.STRING },
+
+})

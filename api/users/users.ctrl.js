@@ -1,5 +1,5 @@
 
-var User = require('../../models').User
+var User = require('../../database/model/user')
 
 const create = (req,res) =>{
     let nUser = {name: req.body.name }

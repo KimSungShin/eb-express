@@ -3,13 +3,20 @@
  */
 
 const Sequelize = require('sequelize');
-const config = require('config');
 
+const sequelize = new Sequelize(process.env.RDS_DATABASE, process.env.RDS_USERNAME, process.env.RDS_PASSWORD, {
+	host: process.env.RDS_HOSTNAME,
+	dialect: 'mysql',
+	operatorsAliases: false,
 
-const sequelize = new Sequelize( config.get('Sequelize.mysql.db'),
-                                 config.get('Sequelize.mysql.id'),
-                                 config.get('Sequelize.mysql.password'),
-                                 config.get('Sequelize.mysql.connection_info')  );
+	pool: {
+		max: 5,
+		min: 0,
+		acquire: 30000,
+		idle: 10000
+	},
+
+});
 
 
 module.exports = sequelize;
