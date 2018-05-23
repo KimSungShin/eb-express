@@ -1,0 +1,686 @@
+{
+
+  "AccessToken":{
+    "auth":{
+      "guest":     0,
+      "user":    100,
+      "admin":  1000,
+
+      "signup": "signup",
+      "password": "password"
+
+    }
+  },
+
+  "Password":{
+    "isValidCheck" : true,
+    "comment": "패스워드 관련 configuration, isValidCheck 비밀번호 유효성 검사 여부"
+  },
+
+  "Email":{
+    "isValidCheck" : true,
+    "comment": "이메일주소 로그인 관련 configuration, isValidCheck 이메일주소 유효성 검사 여부"
+  },
+
+  "Publicity":{
+    "title" : "홍보문구",
+    "comment" : "순간의 기록 영원한 추억\niFriendsPet!\n아이프렌즈펫을 통해\n매일매일 반려동물과의 일상을 기록해 보세요.\n세상에 하나뿐인 멋진 일기장을 만들어 주위 사람들과 공유해 보세요.소중한 추억을 영원히 간직할 수 있습니다!\n아래 링크를 통해 앱을 설치해 보세요.\n\n▶ iOS 설치 바로가기\nhttps://goo.gl/PHjgey\n\n▶ 안드로이드 설치 바로가기\nhttps://goo.gl/KFApWL\n\n▶ 페이스북 페이지 바로가기\nhttps://www.facebook.com/ifriendspetpage\n\n▶ 서비스 홈페이지 바로가기\nhttp://www.ifriendspet.com"
+  },
+
+  "Authenticate":{
+    "provider" : {
+      "facebook": "facebook"
+    }
+  },
+
+  "AppInformation":{
+    "os":{
+      "ios":   "ios",
+      "android":    "android"
+    },
+    "type":{
+      "major":"major",
+      "minor":"minor"
+    }
+  },
+
+  "Alarm":{
+    "type":{
+      "snap" : "snap",
+      "diary" : "diary",
+      "comment" : "comment",
+      "community" : "community"
+    },
+
+    "reactionType" : {
+      "emotion" : "emotion",
+      "comment" : "comment",
+      "snap" : "snap",
+      "tag" : "tag"
+    },
+
+    "limit" : 10
+  },
+
+
+  "Snap":{
+    "type":{
+      "diary":   "diary",
+      "snap":    "snap",
+      "contest": "contest",
+      "event": "event",
+      "stroll": "stroll"
+    },
+    "update":{
+      "fields":[ "displayedAt" ]
+    },
+    "writeLimit" : 5
+  },
+
+
+  "TagInformation":{
+    "type": {
+      "content": "content",
+      "video":   "video",
+      "photo":   "photo",
+      "text":    "text",
+      "snap":    "snap"
+    }
+  },
+
+  "PhotoInformation":{
+    "type": {
+      "diary":     "diary",
+      "collage":   "collage",
+      "timetable": "timetable",
+      "open": "open",
+      "share": "share"
+    },
+    "update":{
+      "fields":["selectedYn","vPosX","vPosY","vScale","vRotation","vWidth","vHeight"]
+    }
+  },
+
+  "Photo":{
+
+    "type": {
+      "thumbnail": "thumbnail",
+      "photo": "photo",
+      "video": "video",
+      "profile": "profile",
+      "contest": "contest",
+      "share": "share",
+      "pet": "pet",
+      "open": "open",
+      "community": "community"
+
+    },
+
+    "allow": {
+      "type" : [ "profile", "pet", "open", "share","contest","community" ]
+    }
+
+  },
+
+  "Text":{
+    "type": {
+      "diary": "diary",
+      "snap":  "snap",
+      "comment": "comment",
+      "notice": "notice",
+      "appInfo": "appInfo",
+      "contest": "contest",
+      "registration": "registration"
+    },
+
+    "update":{
+      "fields":["title","content"]
+    },
+    "allow": {
+      "type" : [ "snap", "contest" ]
+    }
+
+  },
+
+  "Term":{
+    "type": {
+      "service":     "service",
+      "personal":    "personal",
+      "location":    "location",
+      "marketting":  "marketting"
+    }
+  },
+
+  "ThumbnailInformation":{
+    "type": {
+      "small": "small",
+      "large": "large"
+    }
+  },
+
+  "Pet":{
+
+    "update":{
+      "fields":["name","weight","birthDate","adoptionDate","gender","firstClass","secondClass","secondName","photoId","fatherClass","motherClass"]
+    },
+    "firstClass": [
+      {
+        "dog": {
+          "petInformationId": "1",
+          "comment": "강아지"
+        },
+        "cat": {
+          "petInformationId": "2",
+          "comment": "고양이"
+        },
+        "etc": {
+          "petInformationId": "3",
+          "comment": "기타"
+        }
+      }
+    ]
+  },
+
+  "Profile":{
+    "status": {
+      "active":  "active",
+      "resign":  "resign",
+      "blocked":  "blocked"
+    },
+
+    "update":{
+      "fields":["name","gender","birthDay","age","nickName","location","timeZone","photoId","email"]
+    },
+
+    "statistics":{
+
+      "snap" : "snap",
+      "diary" : "diary",
+      "community" : "community"
+
+    }
+
+  },
+
+
+  "Notice":{
+    "type": {
+      "notice": "notice",
+      "faq":  "faq",
+      "help": "help"
+    },
+    "limit" : 10
+  },
+
+  "Comment":{
+    "limit" : 10
+  },
+
+  "Community": {
+    "type": {
+      "admin": "admin",
+      "normal":"normal"
+    }
+  },
+  "Content": {
+    "type": {
+      "temp":     "temp",
+      "diary":    "diary",
+      "snap":     "snap",
+      "event":    "event",
+      "contest":  "contest",
+      "community":  "community"
+    }
+  },
+
+  "Contest": {
+    "state": {
+      "ready":     "ready",
+      "ongoing":    "ongoing",
+      "finish":     "finish",
+      "stop":       "stop"
+    },
+
+    "type":{
+      "com" : "com",
+      "cat" : "cat",
+      "dog" : "dog",
+      "fish": "fish",
+      "insect" : "insect",
+      "reptile" : "reptile"
+    },
+
+    "limit": 10
+  },
+
+  "Reaction": {
+    "type": {
+      "diary": "diary",
+      "snap":  "snap",
+      "comment":  "comment",
+      "event":  "event"
+    }
+  },
+
+  "UserReaction": {
+    "type": {
+      "diary":  "diary",
+      "snap":   "snap",
+      "comment":  "comment",
+      "emotion": "emotion",
+      "registration": "registration",
+      "evalution": "evalution"
+    }
+  },
+
+
+
+  "Diary": {
+    "type": {
+      "private":  "private",
+      "public":   "public",
+      "diary":   "diary"
+    },
+    "update":{
+      "fields":[ ]
+    }
+  },
+
+  "ProviderProfile": {
+    "provider": {
+      "local":  "local",
+      "email":  "email"
+    },
+    "status" : {
+      "ready" : "0",
+      "complete" : "1",
+      "not_auth" : "2"
+    }
+  },
+
+  "Share": {
+
+    "type": {
+      "snap":  "snap",
+      "diary":  "diary",
+      "photo":  "photo"
+    },
+
+    "Diary":{
+      "backGrounds":[ "/public/images/orange.gif", "/public/images/pizza.gif", "/public/images/snowman.png", "/public/images/turntable.png" ]
+    },
+
+    "Snap":{
+      "defaultPhoto" : "/public/images/shareSnapDefaultPhoto.png"
+    }
+  },
+
+  "Registration": {
+
+    "Question": [
+      {
+        "selection": "1",
+        "title": "불편한 내용",
+        "content": "불편한 내용이 있습니다.",
+        "directInput" : false
+      },
+      {
+        "selection": "2",
+        "title": "광고",
+        "content": "광고성 게시물입니다.",
+        "directInput" : false
+      },
+      {
+        "selection": "3",
+        "title": "관련성 없음",
+        "content": "관련 없는 게시물입니다.",
+        "directInput" : false
+      },
+      {
+        "selection": "4",
+        "title": "직접입력",
+        "content": "직접입력",
+        "directInput" : true
+      }
+    ]
+  },
+
+  "Open": {
+
+    "snap": {
+      "openYn" : true,
+      "limit" : 10
+    },
+
+    "diary": {
+      "openYn" : true,
+      "limit" : 10
+    }
+
+  },
+
+  "Suggest": {
+    "type" :{
+      "selection": "selection",
+      "function":  "function",
+      "record":    "record"
+    },
+    "limit": 999999
+  },
+
+  "Record":{
+
+    "pet":{
+      "type": "pet",
+      "max": 1,
+      "suggestId": 1
+    },
+
+    "profile_nickName":{
+      "type": "profile_nickName",
+      "max": 1,
+      "suggestId": 2
+    },
+
+    "profile_photoId":{
+      "type": "profile_photoId",
+      "max": 1,
+      "suggestId": 3
+    },
+
+    "diary_UIEdit":{
+      "type": "diary_UIEdit",
+      "max": 1,
+      "suggestId": 6
+    },
+
+    "diary_title":{
+      "type": "diary_title",
+      "max": 1,
+      "suggestId": 7
+    },
+
+    "snap_tag":{
+      "type": "snap_tag",
+      "max": 1,
+      "suggestId": 8
+    },
+
+    "snap":{
+      "type": "snap",
+      "max": 999999,
+      "suggestId": 10
+    },
+
+    "snap_first":{
+      "type": "snap_first",
+      "max": 999999,
+      "suggestId": 4
+    },
+
+    "open_snap":{
+      "type": "open_snap",
+      "max": 999999,
+      "suggestId": 11
+    },
+
+    "share_snap":{
+      "type": "share_snap",
+      "max": 999999,
+      "suggestId": 12
+    },
+
+    "open_diary":{
+      "type": "open_diary",
+      "max": 999999,
+      "suggestId": 13
+    },
+
+    "share_diary":{
+      "type": "share_diary",
+      "max": 999999,
+      "suggestId": 14
+    },
+
+    "emotion":{
+      "type": "emotion",
+      "max": 999999,
+      "suggestId": 15
+    },
+
+    "comment":{
+      "type": "comment",
+      "max": 999999,
+      "suggestId": 16
+    },
+
+    "contest":{
+      "type": "contest",
+      "max": 999999,
+      "suggestId": 17
+    },
+
+    "evaluation":{
+      "type": "evaluation",
+      "max": 999999,
+      "suggestId": 18
+    }
+
+  },
+
+  "Mergi": {
+
+    "signUp": {
+      "type" : "signUp",
+      "point" : 10,
+      "method" : "immediate",
+      "comment": "최초 회원가입 보상으로 "
+    },
+
+    "snap": {
+      "type" : "snap",
+      "point" : -5,
+      "method" : "immediate",
+      "comment": "비공개 스냅 작성을 위한 ",
+      "lackErrorCode": 250
+    },
+
+    "snap_limit": {
+      "type" : "snap_limit",
+      "point" : -10,
+      "method" : "immediate",
+      "comment": "비공개 스냅 작성(5회 초과)을 위한 ",
+      "lackErrorCode": 251
+    },
+
+    "snap_op": {
+      "type" : "snap_op",
+      "point" : -2,
+      "method" : "immediate",
+      "comment": "공개 스냅 작성을 위한 ",
+      "lackErrorCode": 252
+    },
+
+    "snap_limit_op": {
+      "type" : "snap_limit_op",
+      "point" : -7,
+      "method" : "immediate",
+      "comment": "공개 스냅 작성(5회 초과)을 위한 ",
+      "lackErrorCode": 253
+    },
+
+    "subscription" :{
+      "type" : "subscription",
+      "point" : -5,
+      "method" : "immediate",
+      "comment": "일기주제 참여를 위해 ",
+      "lackErrorCode": 218
+    },
+
+    "open_snap" :{
+      "type" : "open_snap",
+      "point" : 3,
+      "method" : "immediate",
+      "comment": "스냅공개 보상으로 "
+    },
+
+    "open_diary" :{
+      "type" : "open_diary",
+      "point" : 0,
+      "method" : "immediate",
+      "comment": "일기공개 보상으로 "
+    },
+
+    "share_snap" :{
+      "type" : "share_snap",
+      "point" : 5,
+      "method" : "immediate",
+      "comment": "스냅공유 보상으로 "
+    },
+
+    "evaluation" :{
+      "type" : "evaluation",
+      "point" : 5,
+      "method" : "immediate",
+      "comment": "스냅 평가 보상으로 "
+    },
+
+    "emotion" :{
+      "type" : "emotion",
+      "point" : 1,
+      "method" : "immediate",
+      "comment": "감정표현 보상으로 "
+    },
+
+    "emotedBy" :{
+      "type" : "emotedBy",
+      "point" : 1,
+      "method" : "immediate",
+      "comment": "감정표현 획득 보상으로 "
+    },
+
+    "registration" :{
+      "type" : "registration",
+      "point" : 2,
+      "method" : "followup",
+      "comment": "게시물 신고 보상으로 "
+    },
+
+    "suggest" :{
+      "type" : "suggest",
+      "point" : 0,
+      "method" : "immediate",
+      "comment": "행동제안 완료 보상으로 "
+    },
+
+    "emotionComment":{
+      "type" : "emotionComment",
+      "point" : 0,
+      "method" : "immediate",
+      "comment": "댓글 감정표현 보상으로 "
+    },
+
+    "method":{
+      "immediate": "immediate",
+      "followup": "followup"
+    },
+
+    "limit" : 10
+  },
+
+  "Emotion": {
+    "type": {
+      "like": "like",
+      "nice": "nice",
+      "smile": "smile",
+      "angry": "angry",
+      "sad": "sad",
+      "surprise": "surprise",
+      "cancel": "cancel"
+    },
+
+    "limit" : 10
+  },
+
+  "Event": {
+    "limit" : 10
+  },
+
+  "Subscription": {
+    "limit" : 15
+  },
+
+
+
+  "Tag": {
+    "limit" : 10
+  },
+
+
+  "Terminal":{
+    "osType" : {
+      "ios" : "ios",
+      "android" : "android"
+    }
+  },
+
+  "Push":{
+    "type": {
+      "snap":"snap",
+      "comment":"comment",
+      "diary":"diary",
+      "tag":"tag",
+      "community":"community",
+      "emotion":"emotion"
+    },
+    "pushChkType" : {
+      "comment" : "comment",
+      "commentEmotion" : "commentEmotion",
+      "emotion" : "emotion",
+      "community" : "community"
+    },
+    "os" : {
+      "ios" : "ios",
+      "android" : "android"
+    }
+  },
+
+  "PopUp":{
+    "region":{
+      "전국": "0",
+      "서울": "10",
+      "강원": "20",
+      "대전": "30",
+      "충남": "31",
+      "세종": "33",
+      "충북": "36",
+      "인천": "40",
+      "경기": "41",
+      "광주": "50",
+      "전남": "51",
+      "전북": "56",
+      "부산": "60",
+      "경남": "62",
+      "울산": "68",
+      "제주": "69",
+      "대구": "70",
+      "경북": "71",
+      "기타": "99"
+    },
+    "race":{
+      "1":"dog",
+      "2":"cat",
+      "3": "etc"
+    },
+    "ageGroup":{
+      "10": "age_10",
+      "20": "age_20",
+      "30": "age_30",
+      "40": "age_40",
+      "50": "age_50",
+      "60+": "age_60+"
+    }
+  }
+
+}
+
