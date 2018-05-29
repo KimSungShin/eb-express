@@ -11,20 +11,12 @@ const create = (req,res) =>{
 }
 
 const list = (req,res) =>{
-    // var limit = req.query.limit || 10;
-    // var offset = req.query.offset || 0;
-    // if( Number.isNaN( parseInt(limit) ) ){
-    //     return res.status(400).end();
-    // }
-    // if( Number.isNaN( parseInt(offset) ) ){
-    //     return res.status(400).end();
-    // }
-    // var result = users.slice(offset,limit);
-    // res.json(result);
+
     return User.findAll()
     .then(results =>{
         res.json(results);
     })
+
 }
 
 const get = (req,res) =>{
@@ -35,6 +27,22 @@ const get = (req,res) =>{
     })[0]
 
     res.json(result);
+}
+
+const modify = (req,res) =>{
+	var id = req.params.id
+
+	let body = req.body
+
+    let options = {
+	    where: {
+	        id
+	    },
+        returning: true
+    }
+
+    return User.update(body,options)
+
 }
 
 const del = (req,res) =>{
@@ -53,6 +61,7 @@ const del = (req,res) =>{
 module.exports = {
     create,
     get,
+	modify,
     list,
     del
 }
