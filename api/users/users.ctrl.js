@@ -22,11 +22,10 @@ const list = (req,res) =>{
 const get = (req,res) =>{
     var id = req.params.id
 
-    var result = users.filter(user=>{
-        return user.id == id
-    })[0]
-
-    res.json(result);
+    return User.findOne({where: {id}})
+    .then(user=>{
+        return res.json(user)
+    })
 }
 
 const modify = (req,res) =>{
@@ -42,19 +41,21 @@ const modify = (req,res) =>{
     }
 
     return User.update(body,options)
+    .then(user=>{
+        return res.json(user)
+    })
 
 }
 
 const del = (req,res) =>{
-    var id = parseInt(req.params.id)
+	var id = req.params.id
 
-    users = users.filter(user => user.id !== id )
+    return User.destroy({where: {id}, returning:true })
+    .then(user=>{
+        return res.json(user)
+    })
 
-    var result = users.filter(user=>{
-        return user.id == id
-    })[0]
 
-    res.status(204).end();
 }
 
 
