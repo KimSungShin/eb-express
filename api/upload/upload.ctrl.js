@@ -34,7 +34,7 @@ const uploadFiles = (req,res) =>{
 				file.photoId = `contents/photo/${file.token}${path.extname( file.originalname )}`
 
 				console.debug( '--s3 upload start--' );
-				console.debug( 'file ::: %j',file );
+
 
 				return awsS3.put( file, (e,data)=> {
 
@@ -72,7 +72,8 @@ const upload = function (req, res) {
 
 	var deferred = Q.defer();
 
-	var storage = multer.diskStorage({
+	var storage = multer.memoryStorage(
+		/*{
 
 		// 서버에 저장할 폴더
 		destination: function (req, file, cb) {
@@ -98,7 +99,8 @@ const upload = function (req, res) {
 			console.debug( 'filename: %j', file );
 			cb(null, file.originalname );
 		}
-	});
+		}*/
+	);
 
 	var upload = multer({ storage: storage }).any();
 
