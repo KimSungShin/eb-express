@@ -37,7 +37,7 @@ const modify = (req,res) =>{
 	    where: {
 	        id
 	    },
-        returning: true
+	    returning: true
     }
 
     return User.update(body,options)

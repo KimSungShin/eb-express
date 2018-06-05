@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const cors = require('cors');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -25,6 +27,28 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
+
+let originsWhitelist = [ 'http://localhost:8100' ]
+
+console.log(` originsWhitelist=${JSON.stringify(originsWhitelist)} `)
+
+
+var corsOptions = {
+	origin: function(origin, callback){
+
+		var isWhitelisted = originsWhitelist.indexOf(origin) !== -1;
+
+		console.log('!!!! originsWhitelist===>'+JSON.stringify(originsWhitelist))
+		console.log('!!!! origin===>'+origin)
+		console.log('!!!! isWhitelisted===>'+isWhitelisted)
+
+		callback(null, isWhitelisted);
+	},
+	methods: ['GET', 'PUT', 'POST', 'DELETE'],
+	credentials:true
+}
+
+app.use( cors(corsOptions) );
 
 router(app);
 
